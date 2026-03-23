@@ -27,8 +27,9 @@ A Retrieval-Augmented Generation (RAG) based Telegram bot that answers questions
 ---
 
 ## 📁 Project Structure
-'''text
-  genai-telegram-rag-bot/
+
+```text
+genai-telegram-rag-bot/
 ├── Data/                   # Knowledge Base: Input documents (txt/md)
 │   ├── doc1.txt            # e.g., Company Policies
 │   ├── doc2.txt            # e.g., Technical FAQs
@@ -45,78 +46,121 @@ A Retrieval-Augmented Generation (RAG) based Telegram bot that answers questions
 │   └── test_bot.py         # Telegram handler mocks
 ├── main.py                 # Application Entry Point & Bot Interface
 ├── requirements.txt        # Project dependencies
-└── README.md               # Documentation & Design Decisions
-└── Feature_implementations.md #Features implemented list 
-└── key_decisions.md        # Key decisions taken 
-'''
-----
+├── README.md               # Documentation & Design Decisions
+├── Feature_implementations.md # Features implemented list
+└── key_decisions.md        # Key decisions taken
+```
+
+---
 
 ## ⚙️ Setup Instructions
 
-### Clone the repository
-'''bash
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/navyakumari2902-tech/GENAI_TELEGRAM_RAG_BOT.git
 cd genai-telegram-rag-bot
-'''
+```
 
-### Create and activate virtual environment
-'''bash
+### 2. Create and activate virtual environment
+
+```bash
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate  # Windows (PowerShell)
-'''
-###  3️. Install Dependencies
-'''bash
-pip install -r requirements.txt
-'''
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows (PowerShell)
+```
 
-### 4. Documents 
-'''bash
-Place your .txt files inside:
-- Data/
-'''
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add Documents
+
+Place your `.txt` files inside:
+
+```
+Data/
+```
+
+---
 
 ### 5. Set Telegram Bot Token
 
-In main.py:
+In `main.py`:
 
-BOT_TOKEN = "8646544195:AAFVKiGW9yalZ7QzT4kUdEMN1nV9shzealQ"
-BOT_Username = @navya2904_bot
+```python
+BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+BOT_USERNAME = "@your_bot_username"
+```
+
+⚠️ **Important:** Never commit your real bot token to GitHub. Use environment variables instead.
+
+---
 
 ### 6. Build RAG Index (IMPORTANT)
-'''bash
+
+```bash
 python -m rag.rag_pipeline
-'''
+```
 
 This step will:
-           - Load documents
-           - Generate embeddings
-           - Store vector index in storage/
+- Load documents  
+- Generate embeddings  
+- Store vector index in `storage/`  
+
+---
 
 ### 7. Run Telegram Bot
-'''bash
+
+```bash
 python main.py
-'''
+```
 
-Example Usage
-Start the bot:/start
+---
 
-Ask questions:What is RAG?
-or:
+## 💬 Example Usage
+
+Start the bot:
+```
+/start
+```
+
+Ask questions:
+```
+What is RAG?
+```
+
+or
+
+```
 /ask What is machine learning?
+```
 
-Get help:/help
-🧪 Example Queries
+Get help:
+```
+/help
+```
+
+---
+
+## 🧪 Example Queries
+
 - What is RAG?
 - What is machine learning?
 - What is a vector database?
 - Who is Vara?
 
 ---
-## Testing 
-- python -m tests.test_rag
-- python -m tests.test_integration
-- python -m tests.test_cache
-- python -m tests.test_bot
 
+## 🧪 Testing
 
+```bash
+python -m tests.test_rag
+python -m tests.test_integration
+python -m tests.test_cache
+python -m tests.test_bot
+```
+
+---
