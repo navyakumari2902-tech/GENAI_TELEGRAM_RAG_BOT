@@ -27,7 +27,7 @@ A Retrieval-Augmented Generation (RAG) based Telegram bot that answers questions
 ---
 
 ## 📁 Project Structure
-<pre>
+'''text
   genai-telegram-rag-bot/
 ├── Data/                   # Knowledge Base: Input documents (txt/md)
 │   ├── doc1.txt            # e.g., Company Policies
@@ -48,8 +48,8 @@ A Retrieval-Augmented Generation (RAG) based Telegram bot that answers questions
 └── README.md               # Documentation & Design Decisions
 └── Feature_implementations.md #Features implemented list 
 └── key_decisions.md        # Key decisions taken 
-<pre>
-------
+'''
+----
 
 ## ⚙️ Setup Instructions
 
