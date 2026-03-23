@@ -91,8 +91,8 @@ Data/
 In `main.py`:
 
 ```python
-BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
-BOT_USERNAME = "@your_bot_username"
+BOT_TOKEN = "8646544195:AAFVKiGW9yalZ7QzT4kUdEMN1nV9shzealQ"
+BOT_USERNAME = "@navya2904_bot"
 ```
 
 ⚠️ **Important:** Never commit your real bot token to GitHub. Use environment variables instead.
